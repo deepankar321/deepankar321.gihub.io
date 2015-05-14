@@ -1,7 +1,7 @@
 div.preview {
     width: 100px;
     height: 100px;
-
+    background: #CDF5FD;
     position: absolute;
     top:0;
     bottom: 0;
