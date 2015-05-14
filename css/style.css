@@ -1,8 +1,10 @@
 
 body {
         background: #CDF5FD;
+        overflow:hidden;
 }
-div.preview {
+
+/*div.preview {
     width: 100px;
     height: 100px;
 
@@ -14,3 +16,4 @@ div.preview {
     
     margin: auto;
 }
+*/
