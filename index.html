@@ -12,8 +12,8 @@ var d = document,
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
     m = Math,
-    cos = m.cos,
-    sin = m.sin,
+    sin = m.cos,
+    cos = m.sin,
     PI = m.PI
 
 // The main animation loop
@@ -30,8 +30,8 @@ setInterval( function() {
         // The magic
         r =  (w+h)/2 * ( cos( ( time + i ) * ( .05 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
 
-        context.fillRect( sin(i) * r + w/2,
-                          cos(i) * r + h/2,
+        context.fillRect( cos(i) * r + w/2,
+                          sin(i) * r + h/2,
                           1.5,
                           1.5 )
     }
