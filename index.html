@@ -8,18 +8,14 @@
 var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
-    col = context.fillstyle,
+    context.fillstyle="#FF0000",
     time = 0,
-    rgb=[],
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
     m = Math,
     sin = m.cos,
     cos = m.sin,
     PI = m.PI
-    for(var i = 0; i < 3; i++)
-    rgb.push(Math.floor(Math.random() * 255));
-    col='rgb('+ rgb.join(',') + ')'
 // The main animation loop
 setInterval( function() {
     // Clear
@@ -33,7 +29,7 @@ setInterval( function() {
     while( i-- ) {
         // The magic
 
-        r =  (w+h)/2 * ( sin( ( time + i ) * ( .05 + ( cos(time/100000) / PI  * .2 ) ) ) / PI )
+        r =  (w+h)/2 * ( cos( ( time + i ) * ( .05 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
 
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
