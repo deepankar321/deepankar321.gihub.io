@@ -8,10 +8,9 @@
 var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
-    context.fillstyle="#FF0000",
     time = 0,
-    w = canvas.width = innerWidth,
-    h = canvas.height = innerHeight,
+    w = canvas.width = windowWidth,
+    h = canvas.height = windowHeight,
     m = Math,
     sin = m.cos,
     cos = m.sin,
@@ -35,7 +34,7 @@ setInterval( function() {
                           cos(i) * r + h/2,
                           1.5,
                           1.5 )
-        col;
+         context.fillstyle="#FF0000";
     }
 }, 16 )
   </script>
