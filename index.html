@@ -8,11 +8,9 @@
 var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
-    //context.fillstyle="#ff0000",,
-    
     time = 0,
-    w = canvas.width = windowWidth,
-    h = canvas.height = windowHeight,
+    w = canvas.width = innerWidth,
+    h = canvas.height = innerHeight,
     m = Math,
     cos = m.cos,
     sin = m.sin,
