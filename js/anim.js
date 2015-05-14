@@ -1,16 +1,32 @@
 
-var a=document,
-b=a.body.appendChild(a.createElement("canvas")),
-c=b.getContext("2d"),
-d=0,
-e=b.width=innerWidth,
-f=b.height=innerHeight,
-g=Math,
-h=g.cos,
-j=g.sin,
-k=g.PI;
-setInterval(function(){
-b.width=b.width;
-d+=0.1;for(i=1E4;i--;)
-r=(e+f)/2*(h((d+i)*(0.05+0.2*(j(d/1E5)/k)))/k),
-c.fillRect(j(i)*r+e/2,h(i)*r+f/2,1.5,1.5)},16);
+var d = document,
+    canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
+    context = canvas.getContext( '2d' ),
+    time = 0,
+    w = canvas.width = innerWidth,
+    h = canvas.height = innerHeight,
+    m = Math,
+    cos = m.cos,
+    sin = m.sin,
+    PI = m.PI
+
+// The main animation loop
+setInterval( function() {
+    // Clear
+    canvas.width = canvas.width;
+
+    time += .1;
+
+    // The number of particles to generate
+    i = 10000
+
+    while( i-- ) {
+        // The magic
+        r =  (w+h)/2 * ( cos( ( time + i ) * ( .05 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
+
+        context.fillRect( sin(i) * r + w/2,
+                          cos(i) * r + h/2,
+                          1.5,
+                          1.5 )
+    }
+}, 16 )
