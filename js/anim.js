@@ -1,5 +1,5 @@
 
-var d = document,
+/*var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
     time = 0,
@@ -30,3 +30,4 @@ setInterval( function() {
                           1.5 )
     }
 }, 16 )
+*/
