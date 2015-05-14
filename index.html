@@ -8,7 +8,9 @@
 var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
+    col = context.fillstyle,
     time = 0,
+    rgb=[],
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
     m = Math,
@@ -20,7 +22,8 @@ var d = document,
 setInterval( function() {
     // Clear
     canvas.width = canvas.width;
-
+    for(var i = 0; i < 3; i++)
+    rgb.push(Math.floor(Math.random() * 255));
     time += .1;
 
     // The number of particles to generate
@@ -28,8 +31,10 @@ setInterval( function() {
 
     while( i-- ) {
         // The magic
-        r =  (w+h)/2 * ( cos( ( time + i ) * ( .05 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
-
+        for(var i = 0; i < 3; i++){
+          rgb.push(Math.floor(Math.random() * 255));}
+        r =  (w+h)/2 * ( sin( ( time + i ) * ( .05 + ( cos(time/100000) / PI  * .2 ) ) ) / PI )
+        col='rgb('+ rgb.join(',') + ')'
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
                           1.5,
