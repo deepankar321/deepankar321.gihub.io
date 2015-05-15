@@ -10,8 +10,8 @@ var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
     time = 0,
-    w = canvas.width = screen.availWidth,
-    h = canvas.height = screen.availHeight,
+    w = canvas.width = windowWidth,
+    h = canvas.height = windowHeight,
     m = Math,
     sin = m.cos,
     cos = m.sin,
@@ -31,8 +31,8 @@ setInterval( function() {
         // The magic
         r =  (w+h)/2 * ( sin( ( time + i ) * ( .05 + ( cos(time/100000) / PI  * .2 ) ) ) / PI )
 
-        context.fillRect( cos(i) * r + w,
-                          sin(i) * r + h,
+        context.fillRect( cos(i) * r + w/2,
+                          sin(i) * r + h/2,
                           1.5,
                           1.5 )
     }
