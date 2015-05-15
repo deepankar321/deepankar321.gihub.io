@@ -17,6 +17,12 @@ var d = document,
     cos = m.cos,
     sin = m.sin,
     PI = m.PI
+    // add linear gradient
+    var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+    // light blue
+    grd.addColorStop(0, '#8ED6FF');   
+    // dark blue
+    grd.addColorStop(1, '#004CB3');
 
 // The main animation loop
 setInterval( function() {
@@ -31,7 +37,7 @@ setInterval( function() {
     while( i-- ) {
         // The magic
         r =  (w+h)/2 * ( cos( ( time + i ) * ( .5 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
-
+        context.fillStyle = grd;
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
                           1.5,
