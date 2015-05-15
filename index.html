@@ -10,12 +10,12 @@ var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
     time = 0,
-    w = canvas.width = windowWidth,
-    h = canvas.height = windowHeight,
+    w = canvas.width = innerWidth,
+    h = canvas.height = innerHeight,
     m = Math,
-    sin = m.cos,
-    cos = m.sin,
-    PI = 2*m.PI
+    cos = m.cos,
+    sin = m.sin,
+    PI = m.PI
 
 // The main animation loop
 setInterval( function() {
@@ -29,10 +29,10 @@ setInterval( function() {
 
     while( i-- ) {
         // The magic
-        r =  (w+h)/2 * ( sin( ( time + i ) * ( .05 + ( cos(time/100000) / PI  * .2 ) ) ) / PI )
+        r =  (w+h)/2 * ( cos( ( time + i ) * ( .05 + ( sin(time/100000) / PI  * .2 ) ) ) / PI )
 
-        context.fillRect( cos(i) * r + w/2,
-                          sin(i) * r + h/2,
+        context.fillRect( sin(i) * r + w/2,
+                          cos(i) * r + h/2,
                           1.5,
                           1.5 )
     }
