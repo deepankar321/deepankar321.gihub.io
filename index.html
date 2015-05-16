@@ -26,14 +26,14 @@ setInterval( function() {
     // Clear
     canvas.width = canvas.width;
 
-    time += .1;
+    time += .2;
 
     // The number of particles to generate
     i = 10000
 
     while( i-- ) {
         // The magic
-       r =  (w+h)/2 * ( cos( ( time + i ) * ( (-0.5) + ( sin(time/100000) / PI   ) ) ) / PI )
+       r =  (w+h)/2 * ( cos( ( time + i ) *  ( 0.05 + ( sin(time/100000) / PI  * 0.2 ) ) ) / PI )
         context.fillStyle = grd;
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
