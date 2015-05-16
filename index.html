@@ -9,7 +9,6 @@
 var d = document,
     canvas = d.body.appendChild( d.createElement( 'canvas' ) ),
     context = canvas.getContext( '2d' ),
-    //context.fillStyle = "#FF1C0A";
     time = 0,
     w = canvas.width = innerWidth,
     h = canvas.height = innerHeight,
@@ -19,9 +18,7 @@ var d = document,
     PI = m.PI
     // add linear gradient
     var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-    // light blue
     grd.addColorStop(0, '#FCFC4E');   
-    // dark blue
     grd.addColorStop(1, '#FCDE4E');
 
 // The main animation loop
@@ -40,8 +37,8 @@ setInterval( function() {
         context.fillStyle = grd;
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
-                          2.5,
-                          2.5 )
+                          1.5,
+                          1.5 )
     }
 }, 16 )
   </script>
