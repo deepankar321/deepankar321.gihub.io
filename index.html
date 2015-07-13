@@ -29,13 +29,13 @@ setInterval( function() {
     time += .2;
 
     // The number of particles to generate
-    i = 1000;
+    i = 10000;
 
     while( i-- ) {
         // The magic
       r =  (w+h)/2*(sin((time + i)*(0.05 +(cos(time/1000)/PI*0.05 )))/PI)
       context.fillStyle = grd;
-      context.fillRect(sin(i)*r+w/2,cos(i)*r+h/2,5.5,5.5 )
+      context.fillRect(sin(i)*r+w/2,cos(i)*r+h/2,1.5,1.5 )
     }
 }, 16 )
   </script>
