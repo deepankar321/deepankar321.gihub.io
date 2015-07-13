@@ -18,8 +18,8 @@ var d = document,
     PI = m.PI
     // add linear gradient
     var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
-    grd.addColorStop(0, '#FCFC4E');   
-    grd.addColorStop(1, '#FCDE4E');
+    grd.addColorStop(0, '#000');   
+    grd.addColorStop(1, '#000');
 
 // The main animation loop
 setInterval( function() {
@@ -29,11 +29,11 @@ setInterval( function() {
     time += .2;
 
     // The number of particles to generate
-    i = 10000
+    i = 10000;
 
     while( i-- ) {
         // The magic
-       r =  (w+h)/2 * ( sin( ( time + i ) *  ( 0.05 + ( cos(time/1000) / PI  * 0.5 ) ) ) / PI )
+       r =  (w+h)/2 * ( sin( ( time + i ) *  ( 0.05 + ( cos(time/1000) / PI  * 0.05 ) ) ) / PI )
         context.fillStyle = grd;
         context.fillRect( sin(i) * r + w/2,
                           cos(i) * r + h/2,
