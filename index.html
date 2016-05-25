@@ -36,9 +36,9 @@ setInterval( function() {
         // The magic
       r =  (w+h)/2*(sin((time + i)*(0.05 +(cos(time/1000)/PI*0.05 )))/PI)
       context.fillStyle = grd;
-      context.fillRect(sin(i)*r+w/2,cos(i)*r+h/2,2.5,2.5 )
+      context.fillRect(sin(i)*r+w/2,cos(i)*r+h/2,2.5,2.5 );
     }
-}, 16 )
+}, 1000 )
   </script>
 </body>
 </html>
