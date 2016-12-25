@@ -4,11 +4,11 @@
 	<title>test script passing</title>
 	<link rel="stylesheet" href="css/materialize.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Compiled and minified CSS -->
 
 	<!-- Compiled and minified JavaScript -->
-	<script src="js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 </head>
 <body>
 <div class="row">
